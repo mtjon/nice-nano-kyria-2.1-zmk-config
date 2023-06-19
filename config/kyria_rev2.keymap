@@ -12,6 +12,8 @@
 #define LSYM 1
 #define LNPD 2
 #define LMED 3
+#define LNAV 4
+#define LNUL 5
 
 #define LDEF 0
 
@@ -41,7 +43,7 @@
     &kp ESC   &kp Q       &kp W      &kp F      &kp P       &kp B                                               &kp J    &kp L       &kp U      &kp Y      &kp SEMI    &kp BSLH
     &kp BSPC  &hm LCTRL A &hm LALT R &hm LGUI S &hm LSHFT T &kp G                                               &kp M    &hm RSHFT N &hm RGUI E &hm RALT I &hm RCTRL O &kp SQT
     &kp LSHFT &kp Z       &kp X      &kp C      &kp D       &kp V    &kp LSHFT &kp LSHFT     &mo LMED &tog LNPD &kp K    &kp H       &kp COMMA  &kp DOT    &kp FSLH    &to LDEF
-                                     &kp LGUI   &kp DEL     &mo LSYM &kp SPACE &kp TAB       &kp ESC  &kp RET   &mo LSYM &kp BSPC    &kp RALT
+                                     &kp LGUI   &mo LNAV    &mo LSYM &kp SPACE &kp TAB       &kp ESC  &kp RET   &mo LSYM &kp BSPC    &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -90,6 +92,38 @@
     &none      &none &none &none      &none      &none                             &none &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none &none
     &none      &none &none &none      &none      &none &none &none     &none &none &none &none      &kp C_BRI_DN &kp C_BRI_UP &none &to LDEF
                            &none      &none      &none &none &none     &none &none &none &none      &none
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        nav_layer {
+// --------------------------------------------------------------------------------------------------------
+// |     |     |     |     |     |     |                           |     |     |     |     |     |        |
+// |     |     |     |     |     |     |                           |     |     |     |     |     |        |
+// |     |     |     |     |     |     |     |     |   |     |     |     |     |     |     |     |  LDEF  |
+//                   |     |     |     |     |     |   |     |     |     |     |     |
+            bindings = <
+    &none &none &none &none &none &none                             &none &none &none &none &none &none
+    &none &none &none &none &none &none                             &none &none &none &none &none &none
+    &none &none &none &none &none &none &none &none     &none &none &none &none &none &none &none &to LDEF
+                      &none &none &none &none &none     &none &none &none &none &none
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        null_layer {
+// --------------------------------------------------------------------------------------------------------
+// |     |     |     |     |     |     |                           |     |     |     |     |     |        |
+// |     |     |     |     |     |     |                           |     |     |     |     |     |        |
+// |     |     |     |     |     |     |     |     |   |     |     |     |     |     |     |     |  LDEF  |
+//                   |     |     |     |     |     |   |     |     |     |     |     |
+            bindings = <
+    &none &none &none &none &none &none                             &none &none &none &none &none &none
+    &none &none &none &none &none &none                             &none &none &none &none &none &none
+    &none &none &none &none &none &none &none &none     &none &none &none &none &none &none &none &to LDEF
+                      &none &none &none &none &none     &none &none &none &none &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
