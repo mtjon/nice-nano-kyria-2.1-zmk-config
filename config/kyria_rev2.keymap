@@ -34,7 +34,7 @@
         compatible = "zmk,keymap";
 
         letter_layer {
-// -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // |  ESC    |  Q        |  W       |  F       |  P        |   B    |                                          |   J    |  L        |  L       |  Y       |   ;       |   \     |
 // | BSPC    |  A/LCTRL  |  R/LALT  |  S/LGUI  |  T/LSHFT  |   G    |                                          |   M    |  N/RSHFT  |  E/RGUI  |  I/RALT  | O/RCTRL   |   '     |
 // | SHIFT   |  Z        |  X       |  C       |  D        |   V    | L SHIFT | L SHIFT |   |  LMED  | LNPD    |   K    |  H        |  ,       |  .       |   /       | LDEF    |
@@ -82,7 +82,7 @@
         };
 
         media_layer {
-// -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// ----------------------------------------------------------------------------------------------------------------------------------------------
 // | BT_CLR   |     |     | BT_PRV   | BT_NXT   |     |                           |     |   Prev   | Play/Pause |   Next     |     |            |
 // |          |     |     |          |          |     |                           |     |   MUTE   |   VOL_DN   |   VOL_UP   |     |            |
 // |          |     |     |          |          |     |     |     |   |     |     |     |          | Bright. Up | Bright. Dn |     |    LDEF    |
@@ -98,16 +98,16 @@
         };
 
         nav_layer {
-// --------------------------------------------------------------------------------------------------------
-// |     |     |     |     |     |     |                           |     |     |     |     |     |        |
-// |     |     |     |     |     |     |                           |     |     |     |     |     |        |
-// |     |     |     |     |     |     |     |     |   |     |     |     |     |     |     |     |  LDEF  |
-//                   |     |     |     |     |     |   |     |     |     |     |     |
+// ------------------------------------------------------------------------------------------------------------------------------------
+// |     |         |        |        |         |     |                               |     |  HOME  |   UP   |   END   |     |        |
+// |     |  LCTRL  |  LALT  |  LGUI  |  LSHFT  |     |                               |     |  LEFT  |  DOWN  |  RIGHT  |     |        |
+// |     |         |        |        |         |     |      |      |   |      |      |     |        |        |         |     |  LDEF  |
+//                          |        |         |     |      |      |   |      |      |     |        |        |
             bindings = <
-    &none &none &none &none &none &none                             &none &none &none &none &none &none
-    &none &none &none &none &none &none                             &none &none &none &none &none &none
-    &none &none &none &none &none &none &none &none     &none &none &none &none &none &none &none &to LDEF
-                      &none &none &none &none &none     &none &none &none &none &none
+    &none &none     &none    &none    &none     &none                                 &none &kp HOME &kp UP   &kp END   &none &none
+    &none &kp LCTRL &kp LALT &kp LGUI &kp LSHFT &none                                 &none &kp LEFT &kp DOWN &kp RIGHT &none &none
+    &none &none     &none    &none    &none     &none &none  &none      &none  &none  &none &none    &none    &none     &none &to LDEF
+                             &none    &none     &none &trans &trans     &trans &trans &none &none    &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
