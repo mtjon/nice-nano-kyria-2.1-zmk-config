@@ -63,18 +63,19 @@
 
         numpad_layer {
 // --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-// |     |     |     |        |       |        |                                           |  /            |    7    |    8    |    9    |     -      |   NLCK   |
-// |     |     |     |        |       |        |                                           |  *            |    4    |    5    |    6    |     +      |          |
-// |     |     |     |        |       |        | L SHIFT | L SHIFT |   | L SHIFT | LNPD    |  .            |    1    |    2    |    3    |     =      |   LDEF   |
-//                   |        |       |        |  SPACE  |   TAB   |   |   ESC   |  RET    | LSYM          |    0    |         |
+// |     | F1    | F2    | F3     | F4    | F5     |                                           |  /            |    7    |    8    |    9    |     -      |   NLCK   |
+// |     | F6    | F7    | F8     | F9    | F10    |                                           |  *            |    4    |    5    |    6    |     +      |          |
+// |     | F11   | F12   | F13    | F14   | F15    | L SHIFT | L SHIFT |   | L SHIFT | LNPD    |  .            |    1    |    2    |    3    |     =      |   LDEF   |
+//                       |        |       |        |  SPACE  |   TAB   |   |   ESC   |  RET    | LSYM          |    0    |         |
             bindings = <
-    &none &none &none &none    &none   &none                                                &kp KP_DIVIDE   &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS &kp KP_NUM
-    &none &none &none &none    &none   &none                                                &kp KP_MULTIPLY &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &none
-    &none &none &none &none    &none   &none    &kp LSHFT &kp LSHFT     &kp LSHFT &tog LNPD &kp KP_DOT      &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_EQUAL &to LDEF
-                      &kp LGUI &kp DEL &mo LSYM &kp SPACE &kp TAB       &kp ESC   &kp RET   &kp TAB         &kp KP_N0 &none
+    &none &kp F1  &kp F2  &kp F3   &kp F4  &kp F5                                               &kp KP_DIVIDE   &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS &kp KP_NUM
+    &none &kp F6  &kp F7  &kp F8   &kp F9  &kp F10                                              &kp KP_MULTIPLY &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS  &none
+    &none &kp F11 &kp F12 &kp F13  &kp F14 &kp F15  &kp LSHFT &kp LSHFT     &kp LSHFT &tog LNPD &kp KP_DOT      &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_EQUAL &to LDEF
+                          &kp LGUI &kp DEL &mo LSYM &kp SPACE &kp TAB       &kp ESC   &kp RET   &kp TAB         &kp KP_N0 &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
+
     };
 };
